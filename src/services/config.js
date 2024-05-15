@@ -6,4 +6,4 @@ api.interceptors.response.use(
   (error) => Promise.reject(error)
 );
 
-export default { api };
+export default api;
