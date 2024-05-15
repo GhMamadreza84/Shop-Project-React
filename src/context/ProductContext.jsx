@@ -7,8 +7,13 @@ const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState();
   useEffect(() => {
     const fetchProducts = async () => {
-      setProducts(await api.get("/products"));
+      try {
+        setProducts(await api.get("/products"));
+      } catch (error) {
+        console.log(error);
+      }
     };
+    fetchProducts();
   }, []);
   return <div></div>;
 };
