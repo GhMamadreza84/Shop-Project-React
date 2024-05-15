@@ -1,9 +1,12 @@
+import { Route, Routes } from "react-router-dom"
 
 
 function App() {
   return (
     <>
-      <h1>Gh Shop</h1>
+      <Routes>
+        <Route path="/products" element={} />
+      </Routes>
     </>
   )
 }
