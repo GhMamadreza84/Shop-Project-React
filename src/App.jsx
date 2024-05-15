@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/products" element={} />
+        <Route path="/products" element={<Product} />
       </Routes>
     </>
   )
