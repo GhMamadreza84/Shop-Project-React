@@ -15,7 +15,7 @@ const ProductProvider = ({ children }) => {
     };
     fetchProducts();
   }, []);
-  return <div></div>;
+  return <ProductContext.Provider>{children}</ProductContext.Provider>;
 };
 
 export default ProductProvider;
