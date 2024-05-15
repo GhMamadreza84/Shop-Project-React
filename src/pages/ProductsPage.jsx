@@ -4,7 +4,12 @@ const ProductsPage = () => {
   console.log(products);
   return (
     <div>
-      <h1>ProductsPage</h1>
+      <div>
+        {products.map((p) => (
+          <p key={p.id}>{p.title}</p>
+        ))}
+      </div>
+      <div>sideBar</div>
     </div>
   );
 };
