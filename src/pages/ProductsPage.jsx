@@ -1,4 +1,5 @@
 import { useProducts } from "../context/ProductContext";
+import styles from "./ProductsPage.module.css";
 const ProductsPage = () => {
   const products = useProducts();
   console.log(products);
