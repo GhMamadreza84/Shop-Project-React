@@ -11,5 +11,11 @@
   border-radius: 20px;
 }
 .card img{
-  
+  width: 230px;
+  height: 230px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+
 }
+
