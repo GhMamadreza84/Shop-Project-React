@@ -12,6 +12,9 @@ const ProductsPage = () => {
   const searchHandler = () => {
     console.log("search");
   };
+  const categoryHandler = ()=>{
+    
+  }
   return (
     <>
       <div>
@@ -37,7 +40,7 @@ const ProductsPage = () => {
             <FaListUl />
             <p>Categories</p>
           </div>
-          <ul>
+          <ul onClick={categoryHandler}>
             <li>All</li>
             <li>Electeronics</li>
             <li>Jewelery</li>
