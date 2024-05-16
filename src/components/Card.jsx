@@ -6,7 +6,7 @@ const Card = ({ data }) => {
     <div>
       <img src={image} alt={title} />
       <h3>{title}</h3>
-      <p>{price}</p>
+      <p>{price} $</p>
       <div>
         <Link to={`/products/${id}`}>
           <TbListDetails />
