@@ -7,7 +7,7 @@ import Loader from "../components/Loader";
 import styles from "./ProductsPage.module.css";
 const ProductsPage = () => {
   const products = useProducts();
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
   return (
     <>
       <div>
@@ -15,7 +15,7 @@ const ProductsPage = () => {
           type="text"
           placeholder="Search..."
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => setSearch(e.target.value.toLowerCase())}
         />
         <button>
           <ImSearch />
