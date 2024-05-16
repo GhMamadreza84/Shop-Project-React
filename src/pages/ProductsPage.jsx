@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useProducts } from "../context/ProductContext";
 import { ImSearch } from "react-icons/im";
 
@@ -6,7 +7,7 @@ import Loader from "../components/Loader";
 import styles from "./ProductsPage.module.css";
 const ProductsPage = () => {
   const products = useProducts();
-  console.log(products);
+  const [search, setSearch] = useState();
   return (
     <>
       <div>
