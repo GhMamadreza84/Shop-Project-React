@@ -14,7 +14,8 @@ const ProductsPage = () => {
   };
   const categoryHandler = (event) => {
     const { tagName } = event.target;
-    const category = event.taget.toLowerCase();
+    const category = event.target.innerText.toLowerCase();
+    if (tagName !== "LI") return;
     console.log(category);
   };
   return (
