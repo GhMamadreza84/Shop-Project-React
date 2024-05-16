@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { TbListDetails } from "react-icons/tb";
 import { TbShoppingBagCheck } from "react-icons/tb";
+import { shortenText } from "./Helper";
 const Card = ({ data }) => {
   const { id, title, image, price } = data;
   return (
