@@ -12,9 +12,11 @@ const ProductsPage = () => {
   const searchHandler = () => {
     console.log("search");
   };
-  const categoryHandler = ()=>{
-    
-  }
+  const categoryHandler = (event) => {
+    const { tagName } = event.target;
+    const category = event.taget.toLowerCase();
+    console.log(category);
+  };
   return (
     <>
       <div>
