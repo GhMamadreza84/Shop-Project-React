@@ -11,7 +11,12 @@ const ProductsPage = () => {
   return (
     <>
       <div>
-        <input type="text" placeholder="Search..." />
+        <input
+          type="text"
+          placeholder="Search..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
         <button>
           <ImSearch />
         </button>
