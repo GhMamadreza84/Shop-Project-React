@@ -8,6 +8,9 @@ import styles from "./ProductsPage.module.css";
 const ProductsPage = () => {
   const products = useProducts();
   const [search, setSearch] = useState("");
+  const searchHandler = () => {
+    console.log("search");
+  };
   return (
     <>
       <div>
@@ -15,9 +18,9 @@ const ProductsPage = () => {
           type="text"
           placeholder="Search..."
           value={search}
-          onChange={(e) => setSearch(e.target.value.toLowerCase())}
+          onChange={(e) => setSearch(e.target.value.toLowerCase().trim())}
         />
-        <button>
+        <button onClick={searchHandler}>
           <ImSearch />
         </button>
       </div>
