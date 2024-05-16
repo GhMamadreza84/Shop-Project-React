@@ -27,6 +27,12 @@
   font-weight: 600;
   margin: 10px 0px 30px;
 }
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .actions a {
   font-size: 1.5rem;
   height: 25px;
