@@ -7,11 +7,11 @@ import styles from "./Card.module.css"
 const Card = ({ data }) => {
   const { id, title, image, price } = data;
   return (
-    <div>
+    <div className={styles.card}>
       <img src={image} alt={title} style={{ width: "150px" }} />
       <h3>{shortenText(title)}</h3>
       <p>{price} $</p>
-      <div>
+      <div className={styles.actions}>
         <Link to={`/products/${id}`}>
           <TbListDetails />
         </Link>
