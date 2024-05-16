@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useProducts } from "../context/ProductContext";
 import { ImSearch } from "react-icons/im";
+import { FaListUl } from "react-icons/fa";
 
 import Card from "../components/Card";
 import Loader from "../components/Loader";
@@ -31,7 +32,19 @@ const ProductsPage = () => {
             <Card key={p.id} data={p} />
           ))}
         </div>
-        <div>sideBar</div>
+        <div>
+          <div>
+            <FaListUl />
+            <p>Categories</p>
+          </div>
+          <ul>
+            <li>All</li>
+            <li>Electeronics</li>
+            <li>Jewelery</li>
+            <li>Men's Clothing</li>
+            <li>Women's Clothing</li>
+          </ul>
+        </div>
       </div>
     </>
   );
