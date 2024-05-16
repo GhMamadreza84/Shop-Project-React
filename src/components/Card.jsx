@@ -6,7 +6,7 @@ const Card = ({ data }) => {
   return (
     <div>
       <img src={image} alt={title} style={{ width: "150px" }} />
-      <h3>{title}</h3>
+      <h3>{shortenText(title)}</h3>
       <p>{price} $</p>
       <div>
         <Link to={`/products/${id}`}>
