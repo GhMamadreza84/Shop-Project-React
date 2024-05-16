@@ -8,7 +8,7 @@ const Card = ({ data }) => {
   const { id, title, image, price } = data;
   return (
     <div className={styles.card}>
-      <img src={image} alt={title} style={{ width: "150px" }} />
+      <img src={image} alt={title}  />
       <h3>{shortenText(title)}</h3>
       <p>{price} $</p>
       <div className={styles.actions}>
