@@ -1,7 +1,8 @@
 const shortenText = (text) => {
   return text.split(" ").slice(0, 3).join(" ");
 };
-const searchedProducts = () =>{
-  
-}
+const searchProducts = (products, search) => {
+  if (!search) return products;
+  const searchedProducts = products;
+};
 export { shortenText };
