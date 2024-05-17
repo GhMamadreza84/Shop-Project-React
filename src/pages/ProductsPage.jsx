@@ -8,7 +8,10 @@ import Loader from "../components/Loader";
 import styles from "./ProductsPage.module.css";
 const ProductsPage = () => {
   const products = useProducts();
+
+  const [displayed, setDisplayed] = useState([]);
   const [search, setSearch] = useState("");
+
   const searchHandler = () => {
     console.log("search");
   };
