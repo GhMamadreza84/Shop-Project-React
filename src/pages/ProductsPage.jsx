@@ -20,7 +20,7 @@ const ProductsPage = () => {
 
   useEffect(() => {
     let finalProducts = searchProducts(products, query.search);
-    finalProducts = filterProducts(finalProducts, category);
+    finalProducts = filterProducts(finalProducts, query.category);
     setDisplayed(finalProducts);
   }, [query]);
 
