@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { searchProducts } from "../helper/Helper";
+import { filterProducts, searchProducts } from "../helper/Helper";
 import { useProducts } from "../context/ProductContext";
 import { ImSearch } from "react-icons/im";
 import { FaListUl } from "react-icons/fa";
@@ -20,7 +20,7 @@ const ProductsPage = () => {
 
   useEffect(() => {
     let finalProducts = searchProducts(products, query.search);
-    console.log(finalProducts);
+    finalProducts = filterProducts(finalProducts, category);
     setDisplayed(finalProducts);
   }, [query]);
 
