@@ -12,7 +12,9 @@ const ProductsPage = () => {
   const [displayed, setDisplayed] = useState([]);
   const [search, setSearch] = useState("");
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    setDisplayed(products);
+  }, [products]);
   const searchHandler = () => {
     console.log("search");
   };
