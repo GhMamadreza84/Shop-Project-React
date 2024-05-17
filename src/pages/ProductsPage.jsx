@@ -46,17 +46,7 @@ const ProductsPage = () => {
   };
   return (
     <>
-      <div>
-        <input
-          type="text"
-          placeholder="Search..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value.toLowerCase().trim())}
-        />
-        <button onClick={searchHandler}>
-          <ImSearch />
-        </button>
-      </div>
+      
       <div className={styles.container}>
         <div className={styles.products}>
           {!displayed.length && <Loader />}
