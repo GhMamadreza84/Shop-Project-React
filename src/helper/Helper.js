@@ -27,4 +27,6 @@ const createQueryObject = (currentQuery, newQuery) => {
   }
   return { ...currentQuery, ...newQuery };
 };
-export { shortenText, searchProducts, filterProducts,createQueryObject };
+
+const getInitialQuery = (searchParams) => {};
+export { shortenText, searchProducts, filterProducts, createQueryObject };
