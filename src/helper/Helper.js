@@ -34,5 +34,12 @@ const getInitialQuery = (searchParams) => {
   const search = searchParams.get("search");
   if (category) query.category = category;
   if (search) query.search = search;
+  return query;
 };
-export { shortenText, searchProducts, filterProducts, createQueryObject,getInitialQuery };
+export {
+  shortenText,
+  searchProducts,
+  filterProducts,
+  createQueryObject,
+  getInitialQuery,
+};

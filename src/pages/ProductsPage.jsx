@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import {
   createQueryObject,
   filterProducts,
+  getInitialQuery,
   searchProducts,
 } from "../helper/Helper";
 import { useProducts } from "../context/ProductContext";
@@ -22,8 +23,7 @@ const ProductsPage = () => {
 
   useEffect(() => {
     setDisplayed(products);
-    
-    setQuery(query);
+    setQuery(getInitialQuery(searchParams));
   }, [products]);
 
   useEffect(() => {
