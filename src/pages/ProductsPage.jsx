@@ -12,6 +12,7 @@ import { FaListUl } from "react-icons/fa";
 import Card from "../components/Card";
 import Loader from "../components/Loader";
 import styles from "./ProductsPage.module.css";
+import SearchBox from "../components/SearchBox";
 const ProductsPage = () => {
   const products = useProducts();
 
@@ -43,7 +44,7 @@ const ProductsPage = () => {
   };
   return (
     <>
-      
+      <SearchBox search={search} setSearch={setSearch} query={query} />
       <div className={styles.container}>
         <div className={styles.products}>
           {!displayed.length && <Loader />}
