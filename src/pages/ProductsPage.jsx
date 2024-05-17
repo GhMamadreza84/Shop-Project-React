@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useProducts } from "../context/ProductContext";
 import { ImSearch } from "react-icons/im";
 import { FaListUl } from "react-icons/fa";
@@ -12,6 +12,7 @@ const ProductsPage = () => {
   const [displayed, setDisplayed] = useState([]);
   const [search, setSearch] = useState("");
 
+  useEffect(() => {}, []);
   const searchHandler = () => {
     console.log("search");
   };
