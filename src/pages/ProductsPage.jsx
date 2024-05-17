@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { searchProducts } from "../helper/Helper";
 import { useProducts } from "../context/ProductContext";
 import { ImSearch } from "react-icons/im";
 import { FaListUl } from "react-icons/fa";
@@ -6,7 +7,6 @@ import { FaListUl } from "react-icons/fa";
 import Card from "../components/Card";
 import Loader from "../components/Loader";
 import styles from "./ProductsPage.module.css";
-import { searchProducts } from "../helper/Helper";
 const ProductsPage = () => {
   const products = useProducts();
 
@@ -21,7 +21,7 @@ const ProductsPage = () => {
   useEffect(() => {
     let finalProducts = searchProducts(products, query.search);
     console.log(finalProducts);
-    
+    setDisplayed(finalProducts);
   }, [query]);
 
   const searchHandler = () => {
