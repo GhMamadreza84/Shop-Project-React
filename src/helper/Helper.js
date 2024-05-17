@@ -1,6 +1,7 @@
 const shortenText = (text) => {
   return text.split(" ").slice(0, 3).join(" ");
 };
+
 const searchProducts = (products, search) => {
   if (!search) return products;
   const searchedProducts = products.filter((p) =>
@@ -8,4 +9,10 @@ const searchProducts = (products, search) => {
   );
   return searchedProducts;
 };
-export { shortenText , searchProducts };
+
+const filterProducts = (products, category) => {
+  if (!category) return products;
+  const filteredProducts = products.filter((p) => p.category === category);
+  return filteredProducts;
+};
+export { shortenText, searchProducts , filterProducts };
