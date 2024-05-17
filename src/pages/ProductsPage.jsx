@@ -28,13 +28,11 @@ const ProductsPage = () => {
 
   useEffect(() => {
     setSearchParams(query);
-    setSearch(query.search)
+    setSearch(query.search);
     let finalProducts = searchProducts(products, query.search);
     finalProducts = filterProducts(finalProducts, query.category);
     setDisplayed(finalProducts);
   }, [query]);
-
-  
 
   const categoryHandler = (event) => {
     const { tagName } = event.target;
@@ -44,7 +42,7 @@ const ProductsPage = () => {
   };
   return (
     <>
-      <SearchBox search={search} setSearch={setSearch} query={query} />
+      <SearchBox search={search} setSearch={setSearch} setQuery={setQuery} />
       <div className={styles.container}>
         <div className={styles.products}>
           {!displayed.length && <Loader />}
