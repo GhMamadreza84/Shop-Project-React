@@ -23,6 +23,7 @@ const ProductsPage = () => {
   useEffect(() => {
     setDisplayed(products);
     const category = searchParams.get("category");
+    const search = searchParams.get("search");
   }, [products]);
 
   useEffect(() => {
