@@ -1,4 +1,5 @@
 import { ImSearch } from "react-icons/im";
+import { createQueryObject } from "../helper/Helper";
 
 const SearchBox = ({ search, setSearch, setQuery }) => {
   const searchHandler = () => {
