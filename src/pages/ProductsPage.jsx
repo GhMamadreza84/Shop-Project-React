@@ -17,7 +17,9 @@ const ProductsPage = () => {
     setDisplayed(products);
   }, [products]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    console.log(query);
+  }, [query]);
 
   const searchHandler = () => {
     setQuery((query) => ({ ...query, search }));
@@ -27,7 +29,7 @@ const ProductsPage = () => {
     const { tagName } = event.target;
     const category = event.target.innerText.toLowerCase();
     if (tagName !== "LI") return;
-    console.log(category);
+    setQuery((query) => ({ ...query, category }));
   };
   return (
     <>
