@@ -12,6 +12,7 @@ import Card from "../components/Card";
 import Loader from "../components/Loader";
 import styles from "./ProductsPage.module.css";
 import SearchBox from "../components/SearchBox";
+import Sidebar from "../components/Sidebar";
 const ProductsPage = () => {
   const products = useProducts();
 
@@ -33,7 +34,6 @@ const ProductsPage = () => {
     setDisplayed(finalProducts);
   }, [query]);
 
-  
   return (
     <>
       <SearchBox search={search} setSearch={setSearch} setQuery={setQuery} />
@@ -44,7 +44,7 @@ const ProductsPage = () => {
             <Card key={p.id} data={p} />
           ))}
         </div>
-        
+        <Sidebar setQuery={setQuery} />
       </div>
     </>
   );
