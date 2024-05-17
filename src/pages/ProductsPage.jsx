@@ -6,6 +6,7 @@ import { FaListUl } from "react-icons/fa";
 import Card from "../components/Card";
 import Loader from "../components/Loader";
 import styles from "./ProductsPage.module.css";
+import { searchProducts } from "../helper/Helper";
 const ProductsPage = () => {
   const products = useProducts();
 
@@ -18,7 +19,9 @@ const ProductsPage = () => {
   }, [products]);
 
   useEffect(() => {
-    console.log(query);
+    let finalProducts = searchProducts(products, query.search);
+    console.log(finalProducts);
+    
   }, [query]);
 
   const searchHandler = () => {
