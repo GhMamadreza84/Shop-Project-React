@@ -29,7 +29,7 @@ const ProductsPage = () => {
   }, [query]);
 
   const searchHandler = () => {
-    setQuery((query) => ({ ...query, search }));
+    setQuery((query) => createQueryObject(query, search));
   };
 
   const categoryHandler = (event) => {
