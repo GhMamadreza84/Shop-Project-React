@@ -11,13 +11,18 @@ const ProductsPage = () => {
 
   const [displayed, setDisplayed] = useState([]);
   const [search, setSearch] = useState("");
+  const [query, setQuery] = useState({});
 
   useEffect(() => {
     setDisplayed(products);
   }, [products]);
+
+  useEffect(() => {}, []);
+
   const searchHandler = () => {
-    console.log("search");
+    setQuery((query) => ({ ...query, search }));
   };
+
   const categoryHandler = (event) => {
     const { tagName } = event.target;
     const category = event.target.innerText.toLowerCase();
