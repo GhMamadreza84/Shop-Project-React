@@ -28,6 +28,7 @@ const ProductsPage = () => {
 
   useEffect(() => {
     setSearchParams(query);
+    setSearch(query.search)
     let finalProducts = searchProducts(products, query.search);
     finalProducts = filterProducts(finalProducts, query.category);
     setDisplayed(finalProducts);
