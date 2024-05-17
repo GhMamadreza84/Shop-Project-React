@@ -1,6 +1,12 @@
 import { FaListUl } from "react-icons/fa";
 
 const Sidebar = () => {
+  const categoryHandler = (event) => {
+    const { tagName } = event.target;
+    const category = event.target.innerText.toLowerCase();
+    if (tagName !== "LI") return;
+    setQuery((query) => createQueryObject(query, { category }));
+  };
   return (
     <div>
       <div>
