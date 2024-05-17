@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { filterProducts, searchProducts } from "../helper/Helper";
+import {
+  createQueryObject,
+  filterProducts,
+  searchProducts,
+} from "../helper/Helper";
 import { useProducts } from "../context/ProductContext";
 import { ImSearch } from "react-icons/im";
 import { FaListUl } from "react-icons/fa";
@@ -32,7 +36,7 @@ const ProductsPage = () => {
     const { tagName } = event.target;
     const category = event.target.innerText.toLowerCase();
     if (tagName !== "LI") return;
-    setQuery((query) => ({ ...query, category }));
+    setQuery((query) => createQueryObject(query, category));
   };
   return (
     <>
