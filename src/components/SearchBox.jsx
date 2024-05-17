@@ -1,4 +1,9 @@
+import { ImSearch } from "react-icons/im";
+
 const SearchBox = () => {
+  const searchHandler = () => {
+    setQuery((query) => createQueryObject(query, { search }));
+  };
   return (
     <div>
       <input

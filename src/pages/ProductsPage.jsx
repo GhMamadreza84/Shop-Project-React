@@ -7,7 +7,6 @@ import {
   searchProducts,
 } from "../helper/Helper";
 import { useProducts } from "../context/ProductContext";
-import { ImSearch } from "react-icons/im";
 import { FaListUl } from "react-icons/fa";
 
 import Card from "../components/Card";
@@ -34,9 +33,7 @@ const ProductsPage = () => {
     setDisplayed(finalProducts);
   }, [query]);
 
-  const searchHandler = () => {
-    setQuery((query) => createQueryObject(query, { search }));
-  };
+  
 
   const categoryHandler = (event) => {
     const { tagName } = event.target;
