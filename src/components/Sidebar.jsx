@@ -1,6 +1,7 @@
 import { FaListUl } from "react-icons/fa";
+import { createQueryObject } from "../helper/Helper";
 
-const Sidebar = () => {
+const Sidebar = ({ setQuery }) => {
   const categoryHandler = (event) => {
     const { tagName } = event.target;
     const category = event.target.innerText.toLowerCase();
