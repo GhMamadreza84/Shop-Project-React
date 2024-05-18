@@ -26,12 +26,12 @@ const Sidebar = ({ query, setQuery }) => {
       <ul onClick={categoryHandler}>
         {categories.map((item) => (
           <li
-            key={categories.id}
             className={
               query.category === item.type.toLowerCase()
                 ? styles.selected
                 : null
             }
+            key={item.id}
           >
             {item.type}
           </li>
