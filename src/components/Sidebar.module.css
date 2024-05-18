@@ -35,8 +35,8 @@
 }
 
 .selected {
-  background-color: #fb8c79;
+  background-color: #fdc7bd;
   font-weight: 600;
   color: #fe5d42;
-  border-radius: 15px;
+  border-radius: 10px;
 }
