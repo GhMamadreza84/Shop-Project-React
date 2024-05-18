@@ -31,3 +31,8 @@
 .sidebar li:hover{
   color: #fe5d42;
 }
+
+.selected{
+  background-color: #fe5d42;
+  border-radius: 15px;
+}
