@@ -10,7 +10,7 @@ const Sidebar = ({ setQuery }) => {
     setQuery((query) => createQueryObject(query, { category }));
   };
   return (
-    <div>
+    <div className={styles.sidebar}>
       <div>
         <FaListUl />
         <p>Categories</p>
