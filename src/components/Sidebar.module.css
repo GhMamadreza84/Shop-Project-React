@@ -1,0 +1,14 @@
+.sidebar{
+  width: 200px;
+  height: fit-content;
+  margin: 10px;
+  padding: 20px;
+  margin-left: 30px;
+  background-color: #fff;
+  border: 2px dashed #e2e2e2;
+  border-radius: 20px;
+}
+
+.sidebar div{
+  width: 200px;
+}
