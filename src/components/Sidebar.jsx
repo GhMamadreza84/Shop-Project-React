@@ -17,12 +17,28 @@ const Sidebar = ({ query, setQuery }) => {
       </div>
       <ul onClick={categoryHandler}>
         <li>All</li>
-        <li className={query.category === "electronics" ? styles.selected :null}>
+        <li
+          className={query.category === "electronics" ? styles.selected : null}
+        >
           Electronics
         </li>
-        <li>Jewelery</li>
-        <li>Men's Clothing</li>
-        <li>Women's Clothing</li>
+        <li className={query.category === "jewelery" ? styles.selected : null}>
+          Jewelery
+        </li>
+        <li
+          className={
+            query.category === "men's clothing" ? styles.selected : null
+          }
+        >
+          Men's Clothing
+        </li>
+        <li
+          className={
+            query.category === "women's clothing" ? styles.selected : null
+          }
+        >
+          Women's Clothing
+        </li>
       </ul>
     </div>
   );
