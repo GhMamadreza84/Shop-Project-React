@@ -1,6 +1,7 @@
 import { ImSearch } from "react-icons/im";
 import { createQueryObject } from "../helper/Helper";
 
+import styles from "./SearchBox.module.css"
 const SearchBox = ({ search, setSearch, setQuery }) => {
   const searchHandler = () => {
     setQuery((query) => createQueryObject(query, { search }));
