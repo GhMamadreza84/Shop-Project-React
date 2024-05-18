@@ -7,7 +7,7 @@ const SearchBox = ({ search, setSearch, setQuery }) => {
     setQuery((query) => createQueryObject(query, { search }));
   };
   return (
-    <div>
+    <div className={styles.search}>
       <input
         type="text"
         placeholder="Search..."
