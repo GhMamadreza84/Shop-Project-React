@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar {
   width: 200px;
   height: fit-content;
   margin: 10px;
@@ -9,7 +9,7 @@
   border-radius: 20px;
 }
 
-.sidebar div{
+.sidebar div {
   width: 200px;
   display: flex;
   align-items: center;
@@ -18,21 +18,23 @@
   font-weight: 500;
 }
 
-.sidebar p{
+.sidebar p {
   margin-left: 10px;
 }
-
-.sidebar li{
+.sidebar ul {
+  padding: 0;
+}
+.sidebar li {
   list-style: none;
   padding: 5px;
   cursor: pointer;
 }
 
-.sidebar li:hover{
+.sidebar li:hover {
   color: #fe5d42;
 }
 
-.selected{
+.selected {
   background-color: #fe5d42;
   border-radius: 15px;
 }
