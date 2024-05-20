@@ -1,4 +1,5 @@
 import { useReducer, createContext, useContext } from "react";
+import { sumProducts } from "../helper/Helper";
 
 const initialState = {
   selectedItems: [],
@@ -15,6 +16,8 @@ const reducer = (state, action) => {
       }
       return {
         selectedItems: [...state.selectedItems],
+        checkout: false,
+        ss: sumProducts(state.selectedItems),
       };
 
     default:
