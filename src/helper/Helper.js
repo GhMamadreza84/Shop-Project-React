@@ -36,6 +36,8 @@ const getInitialQuery = (searchParams) => {
   if (search) query.search = search;
   return query;
 };
+
+const sunProducts = (products) => {};
 export {
   shortenText,
   searchProducts,
