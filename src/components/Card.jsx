@@ -8,7 +8,9 @@ import styles from "./Card.module.css";
 const Card = ({ data }) => {
   const { id, title, image, price } = data;
   const [state, dispatch] = useCart();
-  const clickHandler = () => {};
+  const clickHandler = () => {
+    dispatch({ type: "add", payload: data });
+  };
   return (
     <div className={styles.card}>
       <img src={image} alt={title} />
