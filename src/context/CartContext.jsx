@@ -14,8 +14,8 @@ const CartProvider = ({ children }) => {
 };
 
 const useCart = () => {
-  const result = useContext(CartContext);
-  console.log(result);
+  const [state, dispatch] = useContext(CartContext);
+  return [state, dispatch];
 };
 export default CartProvider;
 export { useCart };
