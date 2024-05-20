@@ -1,16 +1,19 @@
 import { useReducer, createContext, useContext } from "react";
 
-const initialState = {};
+const initialState = {
+  selectedItems: [],
+  itemsCounter: 0,
+  total: 0,
+  checkout: false,
+};
 
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_ITEM":
-      
       break;
-  
+
     default:
-    throw new Error("Invalid Action !")
-      
+      throw new Error("Invalid Action !");
   }
 };
 
@@ -25,7 +28,7 @@ const CartProvider = ({ children }) => {
 };
 
 const useCart = () => {
-  const {state, dispatch} = useContext(CartContext);
+  const { state, dispatch } = useContext(CartContext);
   return [state, dispatch];
 };
 export default CartProvider;
