@@ -10,7 +10,12 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_ITEM":
-      break;
+      if (!selectedItems.find((item) => item.id === action.payload.id)) {
+        state.selectedItems.push({ ...action.payload, quantity: 1 });
+      }
+      return {
+        selectedItems: [...state.selectedItems],
+      };
 
     default:
       throw new Error("Invalid Action !");
