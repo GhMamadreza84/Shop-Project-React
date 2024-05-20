@@ -16,8 +16,8 @@ const reducer = (state, action) => {
       }
       return {
         selectedItems: [...state.selectedItems],
-        checkout: false,
         ...sumProducts(state.selectedItems),
+        checkout: false,
       };
 
     default:

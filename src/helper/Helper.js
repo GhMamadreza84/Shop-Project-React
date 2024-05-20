@@ -38,7 +38,7 @@ const getInitialQuery = (searchParams) => {
 };
 
 const sumProducts = (products) => {
-  const itemsCounter = items.reduce((counter, product) => {
+  const itemsCounter = products.reduce((counter, product) => {
     counter + product.quantity;
   }, 0);
   const total = products.reduce((total, product) => {
