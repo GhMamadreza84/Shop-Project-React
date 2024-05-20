@@ -1,7 +1,9 @@
 import { useReducer, createContext, useContext } from "react";
 
 const initialState = {};
-const reducer = () => {};
+const reducer = (state, action) => {
+  console.log(action)
+};
 
 const CartContext = createContext();
 const CartProvider = ({ children }) => {
