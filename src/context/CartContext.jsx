@@ -11,11 +11,11 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_ITEM":
-      if (!selectedItems.find((item) => item.id === action.payload.id)) {
+      if (!state.selectedItems.find((item) => item.id === action.payload.id)) {
         state.selectedItems.push({ ...action.payload, quantity: 1 });
       }
       return {
-        selectedItems: [...state.selectedItems],
+        ...state,
         ...sumProducts(state.selectedItems),
         checkout: false,
       };
