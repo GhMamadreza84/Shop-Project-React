@@ -7,7 +7,8 @@ import { useCart } from "../context/CartContext";
 import styles from "./Card.module.css";
 const Card = ({ data }) => {
   const { id, title, image, price } = data;
-  useCart();
+  const [state, dispatch] = useCart();
+  const clickHandler = () => {};
   return (
     <div className={styles.card}>
       <img src={image} alt={title} />
@@ -18,7 +19,7 @@ const Card = ({ data }) => {
           <TbListDetails />
         </Link>
         <div>
-          <button>
+          <button onClick={clickHandler}>
             <TbShoppingBagCheck />
           </button>
         </div>
