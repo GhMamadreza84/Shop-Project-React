@@ -1,8 +1,17 @@
 import { useReducer, createContext, useContext } from "react";
 
 const initialState = {};
+
 const reducer = (state, action) => {
-  console.log(action)
+  switch (action.type) {
+    case "ADD_ITEM":
+      
+      break;
+  
+    default:
+    throw new Error("Invalid Action !")
+      
+  }
 };
 
 const CartContext = createContext();
@@ -16,7 +25,7 @@ const CartProvider = ({ children }) => {
 };
 
 const useCart = () => {
-  const [state, dispatch] = useContext(CartContext);
+  const {state, dispatch} = useContext(CartContext);
   return [state, dispatch];
 };
 export default CartProvider;
