@@ -32,7 +32,7 @@ const reducer = (state, action) => {
       const increaseIndex = state.selectedItems.findIndex(
         (item) => item.id === action.payload.id
       );
-      state.selectedItems[increaseIndex].quantity + 1;
+      state.selectedItems[increaseIndex].quantity++;
       return {
         ...state,
         ...sumProducts(state.selectedItems),
@@ -41,7 +41,7 @@ const reducer = (state, action) => {
       const decreaseIndex = state.selectedItems.findIndex(
         (item) => item.id === action.payload.id
       );
-      state.selectedItems[decreaseIndex].quantity - 1;
+      state.selectedItems[decreaseIndex].quantity--;
       return {
         ...state,
         ...sumProducts(state.selectedItems),
