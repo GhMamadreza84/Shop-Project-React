@@ -24,13 +24,6 @@ const Card = ({ data }) => {
           <TbListDetails />
         </Link>
         <div>
-          {quantity === 0 ? (
-            <button onClick={() => clickHandler("ADD_ITEM")}>
-              <TbShoppingBagCheck />
-            </button>
-          ) : (
-            <button onClick={() => clickHandler("INCREASE")}>+</button>
-          )}
           {quantity === 1 && (
             <button onClick={() => clickHandler("REMOVE_ITEM")}>
               <MdDeleteOutline />
@@ -39,6 +32,15 @@ const Card = ({ data }) => {
           {quantity > 1 && (
             <button onClick={() => clickHandler("DECREASE")}>-</button>
           )}
+          <span>{quantity}</span>
+          {quantity === 0 ? (
+            <button onClick={() => clickHandler("ADD_ITEM")}>
+              <TbShoppingBagCheck />
+            </button>
+          ) : (
+            <button onClick={() => clickHandler("INCREASE")}>+</button>
+          )}
+          
         </div>
       </div>
     </div>
