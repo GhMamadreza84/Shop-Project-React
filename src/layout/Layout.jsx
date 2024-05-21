@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
         <Link to="/products">Gh Shop</Link>
         <Link to="/checkout">
           <div>
-            <PiShoppingCartSimpleBold />
+            <PiShoppingCartSimpleBold className={styles.icon}/>
             {!!s.itemsCounter && <span>{s.itemsCounter}</span>}
           </div>
         </Link>
