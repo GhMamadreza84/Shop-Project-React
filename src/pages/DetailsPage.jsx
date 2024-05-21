@@ -6,7 +6,7 @@ const DetailsPage = () => {
   const { id } = useParams();
   const productDetails = useProductDetils(+id);
   if (!productDetails) return <Loader />;
-  const { image, title, description, category } = productDetails;
+  const { image, title, description, category, price } = productDetails;
   return (
     <div>
       <img src={image} alt={title} />
