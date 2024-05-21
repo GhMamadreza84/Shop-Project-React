@@ -6,7 +6,17 @@ const DetailsPage = () => {
   const { id } = useParams();
   const productDetails = useProductDetils(+id);
   if (!productDetails) return <Loader />;
-  return <div>DetailsPage - {id}</div>;
+  const { image, title, description, category } = productDetails;
+  return (
+    <div>
+      <img src={image} alt={title} />
+      <div>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <p>{category}</p>
+      </div>
+    </div>
+  );
 };
 
 export default DetailsPage;
