@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { PiShoppingCartSimpleBold } from "react-icons/pi";
 import { useCart } from "../context/CartContext";
+import styles from "./Layout.module.css"
 const Layout = ({ children }) => {
   const [s] = useCart();
   return (
