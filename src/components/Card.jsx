@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { TbListDetails } from "react-icons/tb";
 import { TbShoppingBagCheck } from "react-icons/tb";
+import { MdDeleteOutline } from "react-icons/md";
 import { shortenText } from "../helper/Helper";
 import { useCart } from "../context/CartContext";
 
