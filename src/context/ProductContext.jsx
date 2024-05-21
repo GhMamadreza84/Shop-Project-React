@@ -33,4 +33,4 @@ const useProductDetils = (id) => {
 };
 
 export default ProductProvider;
-export { useProducts };
+export { useProducts,useProductDetils };
