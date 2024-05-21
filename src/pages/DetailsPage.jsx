@@ -1,5 +1,10 @@
 import { Link, useParams } from "react-router-dom";
 import { useProductDetils } from "../context/ProductContext";
+
+import { SiOpenproject } from "react-icons/si";
+import { IoMdPricetag } from "react-icons/io";
+import { FaArrowLeft } from "react-icons/fa";
+
 import Loader from "../components/Loader";
 
 const DetailsPage = () => {
