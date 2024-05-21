@@ -18,10 +18,19 @@ const DetailsPage = () => {
       <div>
         <h3>{title}</h3>
         <p>{description}</p>
-        <p>{category}</p>
+        <p>
+          <SiOpenproject />
+          {category}
+        </p>
         <div>
-          <span>{price} $</span>
-          <Link to="/products">Back to shop</Link>
+          <span>
+            <IoMdPricetag />
+            {price} $
+          </span>
+          <Link to="/products">
+            <FaArrowLeft />
+            <span>Back to shop</span>
+          </Link>
         </div>
       </div>
     </div>
