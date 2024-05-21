@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import { TbListDetails } from "react-icons/tb";
 import { TbShoppingBagCheck } from "react-icons/tb";
 import { MdDeleteOutline } from "react-icons/md";
-import { shortenText } from "../helper/Helper";
+import { productQuantity, shortenText } from "../helper/Helper";
 import { useCart } from "../context/CartContext";
 
 import styles from "./Card.module.css";
 const Card = ({ data }) => {
   const { id, title, image, price } = data;
   const [state, dispatch] = useCart();
-  const quantity =   
-  const clickHandler = (type) => { 
+  const quantity = productQuantity(state, id);
+  const clickHandler = (type) => {
     dispatch({ type, payload: data });
   };
   return (
@@ -23,18 +23,14 @@ const Card = ({ data }) => {
           <TbListDetails />
         </Link>
         <div>
-          <button onClick={()=>clickHandler("ADD_ITEM")}>
+          <button onClick={() => clickHandler("ADD_ITEM")}>
             <TbShoppingBagCheck />
           </button>
-          <button onClick={()=>clickHandler("REMOVE_ITEM")}>
+          <button onClick={() => clickHandler("REMOVE_ITEM")}>
             <MdDeleteOutline />
           </button>
-          <button onClick={()=>clickHandler("INCREASE")}>
-            +
-          </button>
-          <button onClick={()=>clickHandler("DECREASE")}>
-            -
-          </button>
+          <button onClick={() => clickHandler("INCREASE")}>+</button>
+          <button onClick={() => clickHandler("DECREASE")}>-</button>
         </div>
       </div>
     </div>
