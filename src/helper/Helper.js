@@ -48,6 +48,10 @@ const sumProducts = (products) => {
   );
   return { itemsCounter, total };
 };
+const productQuantity = (state, id) => {
+  const index = state.selectedItems.findIndex((item) => item.id === id);
+  
+};
 export {
   shortenText,
   searchProducts,
