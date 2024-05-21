@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
         </Link>
       </header>
       {children}
-      <footer></footer>
+      <footer>Created By GhMamadreza With 🧡</footer>
     </>
   );
 };
