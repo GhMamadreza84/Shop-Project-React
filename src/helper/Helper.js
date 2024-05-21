@@ -63,4 +63,5 @@ export {
   createQueryObject,
   getInitialQuery,
   sumProducts,
+  productQuantity
 };
