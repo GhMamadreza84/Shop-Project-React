@@ -1,9 +1,15 @@
+import { Link } from "react-router-dom";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
-    <div>
-    </div>
+    <>
+      <header>
+        <Link to="/products">Gh Shop</Link>
+      </header>
+      {children}
+      <footer></footer>
+    </>
   );
-}
+};
 
 export default Layout;
