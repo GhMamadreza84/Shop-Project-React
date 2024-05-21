@@ -6,6 +6,7 @@ import { IoMdPricetag } from "react-icons/io";
 import { FaArrowLeft } from "react-icons/fa";
 
 import Loader from "../components/Loader";
+import styles from "./DetailsPage.module.css"
 
 const DetailsPage = () => {
   const { id } = useParams();
