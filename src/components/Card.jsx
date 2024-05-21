@@ -32,7 +32,7 @@ const Card = ({ data }) => {
           {quantity > 1 && (
             <button onClick={() => clickHandler("DECREASE")}>-</button>
           )}
-          <span>{quantity}</span>
+          {quantity > 0 && <span>{quantity}</span>}
           {quantity === 0 ? (
             <button onClick={() => clickHandler("ADD_ITEM")}>
               <TbShoppingBagCheck />
@@ -40,7 +40,6 @@ const Card = ({ data }) => {
           ) : (
             <button onClick={() => clickHandler("INCREASE")}>+</button>
           )}
-          
         </div>
       </div>
     </div>
