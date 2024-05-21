@@ -10,7 +10,7 @@ const Card = ({ data }) => {
   const { id, title, image, price } = data;
   const [state, dispatch] = useCart();
   const quantity = productQuantity(state, id);
-  console.log(quantity)
+  console.log(quantity);
   const clickHandler = (type) => {
     dispatch({ type, payload: data });
   };
@@ -31,10 +31,14 @@ const Card = ({ data }) => {
           ) : (
             <button onClick={() => clickHandler("INCREASE")}>+</button>
           )}
-          <button onClick={() => clickHandler("REMOVE_ITEM")}>
-            <MdDeleteOutline />
-          </button>
-          <button onClick={() => clickHandler("DECREASE")}>-</button>
+          {quantity === 1 && (
+            <button onClick={() => clickHandler("REMOVE_ITEM")}>
+              <MdDeleteOutline />
+            </button>
+          )}
+          {quantity > 1 && (
+            <button onClick={() => clickHandler("DECREASE")}>-</button>
+          )}
         </div>
       </div>
     </div>
