@@ -42,3 +42,19 @@
   color: #fe5d42;
   margin-right: 10px;
 }
+.information div{
+  display: flex;
+  justify-content: space-between;
+}
+.information a{
+  display: flex;
+  background-color: #fe5d42;
+  align-items: center;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.information a svg{
+  margin-right: 10px;
+}
