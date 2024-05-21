@@ -14,17 +14,17 @@ const DetailsPage = () => {
   if (!productDetails) return <Loader />;
   const { image, title, description, category, price } = productDetails;
   return (
-    <div>
+    <div className={styles.container}>
       <img src={image} alt={title} />
-      <div>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <p>
+      <div className={styles.information}>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>{description}</p>
+        <p className={styles.category}>
           <SiOpenproject />
           {category}
         </p>
         <div>
-          <span>
+          <span className={styles.price}>
             <IoMdPricetag />
             {price} $
           </span>
