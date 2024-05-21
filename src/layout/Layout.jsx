@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   const [s] = useCart();
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <Link to="/products">Gh Shop</Link>
         <Link to="/checkout">
           <PiShoppingCartSimpleBold />
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         </Link>
       </header>
       {children}
-      <footer>Created By GhMamadreza With 🧡</footer>
+      <footer className={styles.footer}>Created By GhMamadreza With 🧡</footer>
     </>
   );
 };
