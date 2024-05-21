@@ -26,6 +26,15 @@ const Card = ({ data }) => {
           <button onClick={clickHandler}>
             <TbShoppingBagCheck />
           </button>
+          <button onClick={clickHandler}>
+            <MdDeleteOutline />
+          </button>
+          <button onClick={clickHandler}>
+            +
+          </button>
+          <button onClick={clickHandler}>
+            -
+          </button>
         </div>
       </div>
     </div>
