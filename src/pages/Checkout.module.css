@@ -1,0 +1,16 @@
+.empty{
+  color: #fe5d42;
+  animation: 5s Go infinite;
+}
+
+@keyframes Go{
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(20rem);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
