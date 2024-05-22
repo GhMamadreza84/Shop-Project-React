@@ -1,6 +1,7 @@
 import { useCart } from "../context/CartContext";
 import BasketCard from "../components/BasketCard";
 import styles from "./Checkout.module.css";
+import empty from "../assets/empty.jpg"
 const CheckoutPage = () => {
   const [state, dispatch] = useCart();
   const clickHandler = (type, payload) => dispatch({ type, payload });
