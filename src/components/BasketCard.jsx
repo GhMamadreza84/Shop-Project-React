@@ -14,6 +14,7 @@ const BasketCard = ({ data }) => {
           </button>
         )}
         {quantity > 1 && <button>-</button>}
+        <span>{quantity}</span>
         <button>+</button>
       </div>
     </div>
