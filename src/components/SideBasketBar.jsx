@@ -17,7 +17,7 @@ const SideBasketBar = ({state}) => {
       <div>
         <BsPatchCheck />
         <p>Status :</p>
-        <span>{}</span>
+        <span>{!state.checkout && "Pending ..."}</span>
       </div>
     </div>
   );
