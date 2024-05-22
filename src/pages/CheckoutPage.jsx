@@ -6,7 +6,7 @@ const CheckoutPage = () => {
   return (
     <div>
       <div>
-        {state.selectedItems.map(product=><BasketCard />)}
+        {state.selectedItems.map(product=><BasketCard key={product.id} data={product} />)}
       </div>
     </div>
   );
