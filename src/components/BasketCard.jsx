@@ -9,13 +9,13 @@ const BasketCard = ({ data }) => {
       <p>{price}</p>
       <div>
         {quantity === 1 && (
-          <button>
+          <button onClick={()=>clickHandler("REMOVE_ITEM")}>
             <MdDeleteOutline />
           </button>
         )}
-        {quantity > 1 && <button>-</button>}
+        {quantity > 1 && <button onClick={()=>clickHandler("DECREASE")}>-</button>}
         <span>{quantity}</span>
-        <button>+</button>
+        <button onClick={()=>clickHandler("INCREASE")}>+</button>
       </div>
     </div>
   );
