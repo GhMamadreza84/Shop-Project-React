@@ -18,9 +18,9 @@ const CheckoutPage = () => {
           ))}
         </div>
       ) : (
-        <div>
-          <h1 className={styles.empty}>Basket Card is Empty 😢</h1>
-          <img src="" alt="" />
+        <div className={styles.empty}>
+          <h1 >Basket Card is Empty 😢</h1>
+          <img src={empty} alt="empty" />
         </div>
       )}
     </div>
