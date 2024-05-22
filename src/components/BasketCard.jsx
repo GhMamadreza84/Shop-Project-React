@@ -7,7 +7,7 @@ const BasketCard = ({ data,clickHandler }) => {
     <div className={styles.card}>
       <img src={image} alt={title} />
       <p>{shortenText(title)}</p>
-      <p>{price} $</p>
+      <p>{price * quantity} $</p>
       <div className={styles.actions}>
         {quantity === 1 && (
           <button onClick={()=>clickHandler("REMOVE_ITEM",data)}>
