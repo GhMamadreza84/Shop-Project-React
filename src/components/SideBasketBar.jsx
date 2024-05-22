@@ -13,7 +13,7 @@ const SideBasketBar = ({ state,clickHandler }) => {
       <div>
         <FaHashtag />
         <p>Quantity : </p>
-        <span>{state.quantity}</span>
+        <span>{state.itemsCounter}</span>
       </div>
       <div>
         <BsPatchCheck />
