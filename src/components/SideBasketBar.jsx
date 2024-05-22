@@ -1,7 +1,8 @@
 
-const SideBasketBar = () => {
+const SideBasketBar = ({state}) => {
   return (
     <div>
+      
     </div>
   );
 }
