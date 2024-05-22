@@ -1,7 +1,7 @@
 import { shortenText } from "../helper/Helper";
 import { MdDeleteOutline } from "react-icons/md";
-const BasketCard = ({ data }) => {
-  const { image, title, price, quantity,clickHandler } = data;
+const BasketCard = ({ data,clickHandler }) => {
+  const { image, title, price, quantity } = data;
   return (
     <div>
       <img src={image} alt={title} />
