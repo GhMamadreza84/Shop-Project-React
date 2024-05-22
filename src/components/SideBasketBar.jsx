@@ -7,7 +7,7 @@ const SideBasketBar = ({ state,clickHandler }) => {
       <div>
         <TbChecklist />
         <p>Total :</p>
-        <span>{state.total} $</span>
+        <span>{state.total.toFixed(2)} $</span>
       </div>
       <div>
         <FaHashtag />
