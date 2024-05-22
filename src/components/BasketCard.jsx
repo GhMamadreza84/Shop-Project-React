@@ -1,5 +1,5 @@
 
-const BasketCard = () => {
+const BasketCard = ({data}) => {
   return (
     <div>
     </div>
