@@ -7,7 +7,15 @@ const BasketCard = ({ data }) => {
       <img src={image} alt={title} />
       <p>{shortenText(title)}</p>
       <p>{price}</p>
-      <div>{quantity === 1 && <MdDeleteOutline />}</div>
+      <div>
+        {quantity === 1 && (
+          <button>
+            <MdDeleteOutline />
+          </button>
+        )}
+        {quantity > 1 && <button>-</button>}
+        <button>+</button>
+      </div>
     </div>
   );
 };
