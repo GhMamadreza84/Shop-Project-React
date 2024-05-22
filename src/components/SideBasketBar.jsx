@@ -4,7 +4,7 @@ import { TbChecklist } from "react-icons/tb";
 import styles from "./SideBasketBar.module.css"
 const SideBasketBar = ({ state,clickHandler }) => {
   return (
-    <div>
+    <div className={styles.sidebar}>
       <div>
         <TbChecklist />
         <p>Total :</p>
