@@ -1,3 +1,4 @@
+import BasketCard from "../components/BasketCard";
 import { useCart } from "../context/CartContext";
 
 const CheckoutPage = () => {
@@ -5,7 +6,7 @@ const CheckoutPage = () => {
   return (
     <div>
       <div>
-        {state.selectedItems.map(product=><p>{product.title}</p>)}
+        {state.selectedItems.map(product=><BasketCard />)}
       </div>
     </div>
   );
