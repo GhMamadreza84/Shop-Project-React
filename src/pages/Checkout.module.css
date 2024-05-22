@@ -8,7 +8,7 @@
     transform: translateX(0);
   }
   50%{
-    transform: translateX(20rem);
+    transform: translateX(15rem);
   }
   100%{
     transform: translateX(0);
