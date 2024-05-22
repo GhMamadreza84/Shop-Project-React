@@ -1,6 +1,14 @@
 .empty{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.empty h1{
   color: #fe5d42;
-  animation: 5s Go infinite;
-  margin-left: 10px;
+}
+.empty img{
+  width: 300px;
+  height: 350px;
 }
 
