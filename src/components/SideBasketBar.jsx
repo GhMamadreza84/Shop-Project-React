@@ -1,7 +1,7 @@
 import { BsPatchCheck } from "react-icons/bs";
 import { FaHashtag } from "react-icons/fa";
 import { TbChecklist } from "react-icons/tb";
-const SideBasketBar = ({state}) => {
+const SideBasketBar = ({ state,clickHandler }) => {
   return (
     <div>
       <div>
@@ -19,8 +19,9 @@ const SideBasketBar = ({state}) => {
         <p>Status :</p>
         <span>{!state.checkout && "Pending ..."}</span>
       </div>
+      <button onClick={() => clickHandler("CHECKOUT")}>Checkout</button>
     </div>
   );
-}
+};
 
 export default SideBasketBar;

@@ -8,7 +8,7 @@ const CheckoutPage = () => {
   const clickHandler = (type, payload) => dispatch({ type, payload });
   return (
     <div>
-      <SideBasketBar state={state} />
+      <SideBasketBar state={state} clickHandler={clickHandler} />
       {state.selectedItems.length ? (
         <div>
           {state.selectedItems.map((product) => (
