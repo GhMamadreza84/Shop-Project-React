@@ -8,7 +8,7 @@ const CheckoutPage = () => {
     <div>
       <div>
         {state.selectedItems.map((product) => (
-          <BasketCard key={product.id} data={product} />
+          <BasketCard key={product.id} data={product} clickHandler={clickHandler}/>
         ))}
       </div>
     </div>
