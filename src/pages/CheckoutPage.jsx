@@ -15,10 +15,10 @@ const CheckoutPage = () => {
     );
   }
   return (
-    <div>
+    <div className={styles.container}>
       <SideBasketBar state={state} clickHandler={clickHandler} />
 
-      <div>
+      <div className={styles.products}>
         {state.selectedItems.map((product) => (
           <BasketCard
             key={product.id}
