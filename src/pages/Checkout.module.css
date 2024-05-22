@@ -1,5 +1,6 @@
 .empty{
   color: #fe5d42;
   animation: 5s Go infinite;
+  margin-left: 10px;
 }
 
