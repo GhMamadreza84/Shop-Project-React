@@ -15,6 +15,7 @@ function App() {
           <Layout>
             <Routes>
               <Route path="/" element={<Navigate to="/products" replace />} />
+              <Route path="/Store-Project-React" element={<Navigate to="/products" replace />} />
               <Route path="/products" element={<ProductsPage />} />
               <Route path="/products/:id" element={<DetailsPage />} />
               <Route path="/products/:id" element={<DetailsPage />} />
